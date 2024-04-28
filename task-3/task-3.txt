@@ -1,0 +1,44 @@
+A. Write and share a small note about your choice of system to schedule periodic tasks (such as downloading a list of ISINs every 24 hours). Why did you choose it? Is it reliable enough; Or will it scale? If not, what are the problems with it? And, what else would you recommend to fix this problem at scale in production?
+
+Answer: When it comes to organizing tasks that need to happen regularly, like updating our daily stock data, I rely on Celery. It's like having a trustworthy assistant who never forgets important tasks. Here's why Celery is my go-to choice:
+
+1. Dependability: Celery has been my rock. It ensures tasks get done, even if there are little bumps along the way, like a server hiccup or a connection issue.
+
+2. Flexibility: Celery grows with me. As my workload increases, I can easily add more workers or upgrade the message system without stressing about performance.
+
+3. Scheduled Tasks Made Easy: With Celery's built-in scheduler, I can set up tasks to run at specific times, like fetching data every morning without fail.
+
+4. Keep an Eye on Things: Celery gives me tools to monitor tasks in real-time. I can see what's happening and control everything smoothly.
+
+But, there are some things to think about:
+
+- Setting Up Can Be Tricky: Getting Celery and the messaging system up and running takes some time and tweaking.
+
+- Resource Demands: Running Celery workers can hog resources, especially if I have lots of tasks or they're hefty ones.
+
+To handle these challenges as my workload grows:
+
+- Fine-Tune Settings: I'll adjust Celery and messaging system settings to use resources smarter and keep things running smoothly.
+
+- Stay Vigilant and Adjust: I'll keep an eye on performance and tweak things as needed. I might even set up automatic adjustments based on how busy things get.
+
+- Plan for Hiccups: I'll be ready for tasks that don't go as planned. I'll have strategies in place to try again, keep an eye out for problems, and store results safely.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+B. In what circumstances would you use Flask instead of Django and vice versa? 
+
+Answer:
+
+Deciding between Flask and Django really depends on what I need for my project:
+
+- Flask :
+  - I pick Flask when I want to keep things simple and have more control.
+  - It's perfect for smaller projects or specialized tasks where I want to choose exactly what features I need.
+
+- Django :
+  - Django is my go-to for bigger projects that need a lot of features right out of the box.
+  - It's like having a whole toolkit ready to go, with everything from user management to database handling.
+
+In short, Flask is my choice for smaller, specialized projects where I want flexibility, while Django is perfect for larger projects that need lots of built-in features.
