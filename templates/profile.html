@@ -1,0 +1,114 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Points</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .btn-outline-light {
+                background-color: white;
+                color: #7750f3;
+            }
+        
+            .btn-outline-light:hover {
+                background-color: #7750f3;
+                color: white;
+            }
+            .rounded-image {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            .text-custom {
+                font-family: Arial, sans-serif;
+                font-size: 18px;
+                color: #333;
+            }
+            .profile-box {
+                background-color: #f8f9fa;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            
+        </style>
+        
+</head>
+
+<body style="background-color:#dee6ec">
+    <div class="bg-light mb-5 d-flex justify-content-center">
+        <h1>Hello {{user.first_name}}</h1>
+    </div>
+    <div class="container vh-100" style="background-color:#dee6ec">
+       
+        <div class="row">
+            <div class="col-md-3" style="background-color:#dee6ec">
+
+                <div class="p-5">
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="home"><i class="fas fa-home"></i> Home</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="profile"><i class="fas fa-user"></i> Profile</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="points"><i class="fas fa-database"></i> Points</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="task"><i class="fas fa-calendar-check"></i> Task</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="logout"><i class="fas fa-power-off"></i> Logout</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col bg-light p-5">
+                <div class="container profile-box"> 
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img src="https://source.boringavatars.com/beam/120/Stefan?colors=264653,f4a261,e76f51" alt="User" class="rounded-circle rounded-image">
+                        </div>
+                        
+                        <div class="col-md-9">
+                            <h3 class="mb-4 heading-custom">Profile</h3>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <h4 class="mb-3 text-custom">First Name:</h4>
+                                    <p class="text-custom">{{ user.first_name }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="mb-3 text-custom">Last Name:</h4>
+                                    <p class="text-custom">{{ user.last_name }}</p>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <h4 class="mb-3 text-custom">Username:</h4>
+                                    <p class="text-custom">{{ user.username }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="mb-3 text-custom">Email:</h4>
+                                    <p class="text-custom">{{ user.email }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

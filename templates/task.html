@@ -1,0 +1,105 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Points</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            .btn-outline-light {
+                background-color: white;
+                color: #7750f3;
+                border-color: #7750f3;
+            }
+        
+            .btn-outline-light:hover {
+                background-color: #7750f3;
+                color: white;
+                border-color: #7750f3;
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .text-custom {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                color: #555;
+            }
+            .table-custom {
+                background-color: #fff;
+                border-radius: 10px;
+                border: 1px solid #ddd;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .table-custom th, .table-custom td {
+                padding: 15px;
+            }
+        </style>
+        
+</head>
+
+<body style="background-color:#dee6ec">
+    <div class="bg-light mb-5 d-flex justify-content-center">
+        <h1>Hello {{user.first_name}}</h1>
+    </div>
+    <div class="container vh-100" style="background-color:#dee6ec">
+       
+        <div class="row">
+            <div class="col-md-3" style="background-color:#dee6ec">
+
+                <div class="p-5">
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="home"><i class="fas fa-home"></i> Home</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="profile"><i class="fas fa-user"></i> Profile</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="points"><i class="fas fa-database"></i> Points</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="task"><i class="fas fa-calendar-check"></i> Task</a>
+                    </div>
+                    <div class="row">
+                        <a class="m-3 btn btn-primary btn-outline-light btn-lg" href="logout"><i class="fas fa-power-off"></i> Logout</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col bg-light p-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">
+                                <h3 class="mb-4 heading-custom">Tasks Completed</h3>
+                                <br>
+                                {% for i in app_names %}
+                                <h4 class="text-custom">{{i}}</h4>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
